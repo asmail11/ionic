@@ -1,0 +1,16 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Tab 2
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card *ngIf="user">
+    <ion-card-content>
+      {{user.email}} - {{user.first_name}} {{user.last_name}}
+    </ion-card-content>
+  </ion-card>
+  <ion-button expand="block" (click)="logout()">Logout</ion-button>
+</ion-content>

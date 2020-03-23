@@ -1,0 +1,7 @@
+{
+  "name": "ionic4Tuts",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Update profile</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-spinner name="bubbles" color="primary" class="center" *ngIf="showSpinner"></ion-spinner>
+  <ion-card>
+    <ion-card-header color="danger">
+      <ion-card-title><ion-icon name="person-circle-outline"></ion-icon> Edit </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <form name="form" (ngSubmit)="formRegister.form.valid && onSubmit()" #formRegister="ngForm" novalidate>
+
+        <ion-item>
+          <ion-input type="text" id="name" placeholder="Enter name" name="name" [(ngModel)]="jwtResponse.name" #name="ngModel" required></ion-input>
+          <ion-text color="danger" *ngIf="formRegister.submitted && name.invalid" class="alert alert-danger">
+            <h4 *ngIf="name.errors.required">Name required</h4>
+          </ion-text>
+        </ion-item>
+
+        <ion-item>
+          <ion-input type="text" id="username" placeholder="Enter username" name="username" [(ngModel)]="jwtResponse.username" #username="ngModel" required></ion-input>
+          <ion-text color="danger" *ngIf="formRegister.submitted && username.invalid" class="alert alert-danger">
+            <h4 *ngIf="username.errors.required">User name required</h4>
+          </ion-text>
+        </ion-item>
+
+        <ion-item>
+          <ion-input type="text" id="email" placeholder="Enter email" name="email" [(ngModel)]="jwtResponse.email" #email="ngModel" required></ion-input>
+          <ion-text color="danger" *ngIf="formRegister.submitted && email.invalid" class="alert alert-danger">
+            <h4 *ngIf="email.errors.required">Email required</h4>
+          </ion-text>
+        </ion-item>
+
+        <ion-item>
+          <ion-input type="password" id="password" placeholder="Enter password" name="password" [(ngModel)]="jwtResponse.password" #password="ngModel" required></ion-input>
+          <ion-text color="danger" *ngIf="formRegister.submitted && password.invalid" class="alert alert-danger">
+            <h4 *ngIf="password.errors.required">Password required</h4>
+          </ion-text>
+        </ion-item>
+
+        <br>
+        <ion-button type="submit" color="primary" fill="solid" size="large" expand="block" [disabled]="name.invalid || username.invalid ||
+                          email.invalid || password.invalid">Register</ion-button>
+      </form>
+
+        <br>
+        <ion-text color="dark">
+          <h2 text-center="">I have an account</h2>
+        </ion-text>
+      <ion-button expand="full" fill="outline" routerLink="/menu/login">Login</ion-button>
+
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+

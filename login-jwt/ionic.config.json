@@ -1,0 +1,7 @@
+{
+  "name": "login-jwt",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

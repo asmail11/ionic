@@ -1,0 +1,8 @@
+{
+  "appId": "io.ionic.starter",
+  "appName": "shopping-cart",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www",
+  "cordova": {}
+}

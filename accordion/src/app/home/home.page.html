@@ -1,0 +1,52 @@
+
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Accordion
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-buttons slot="end">
+  <ion-button (click)="automaticClose = !automaticClose">
+    <ion-icon slot="icon-onlt" name="close" *ngIf="automaticClose"></ion-icon>
+    <ion-icon slot="icon-onlt" name="resize" *ngIf="!automaticClose"></ion-icon>
+  </ion-button>
+</ion-buttons>
+
+<ion-content>
+  <ion-list  *ngFor="let app of applications; let i = index;" class="accordoin-list" lines="none" detail="false" no-padding>
+    <ion-item tappable (click)="toggleSection(i)" [ngClass]="{'section-active': app.open, 'section': !app.open}">
+      <ion-icon slot="start" name="arrow-down-circle-outline" *ngIf="app.open"></ion-icon>
+      <ion-icon slot="start" name="arrow-forward-circle-outline" *ngIf="!app.open"></ion-icon>
+       <ion-label>
+         {{app.name}}
+       </ion-label>
+    </ion-item>
+
+    <div *ngIf="app.applicationComponents && app.open">
+      <ion-list *ngFor="let component of app.applicationComponents; let j = index;" lines="none" class="child-list">
+       <ion-item tappable (click)="toggleItem(i, j)" *ngIf="component.serviceInterfaces" 
+       [ngClass]="{'child-active': component.open, 'child': !component.open}">
+         <ion-icon name="arrow-down-circle-outline" *ngIf="component.open"></ion-icon>
+         <ion-icon name="arrow-forward-circle-outline" *ngIf="!component.open"></ion-icon>
+          <ion-label>
+            {{component.name}}
+          </ion-label>
+       </ion-item>
+
+
+       <app-product [product]="product" *ngIf="!component.serviceInterfaces"></app-product>
+
+      <ion-list *ngIf="component.serviceInterfaces && component.open" class="product-list" lines="none">
+       <app-product [product]="product" *ngFor="let product of component.serviceInterfaces"></app-product>
+      </ion-list>
+
+      </ion-list>
+
+    
+     </div>
+  
+
+        <p *ngIf="app.applicationComponents.length == 0 && app.open">Sorry, nothing in here</p>
+  </ion-list>
+</ion-content>

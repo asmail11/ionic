@@ -1,0 +1,7 @@
+{
+  "name": "expense-logger",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

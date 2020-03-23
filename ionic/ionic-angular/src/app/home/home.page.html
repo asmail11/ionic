@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Ionic Blank
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="ion-padding">
+    <p>{{ text }}</p>
+    <ion-button (click)="onChangeText()">Change text</ion-button>
+  </div>
+  <ion-list lines="full">
+  <ion-item detail *ngFor="let student of students">
+    <ion-label>
+      {{student.name}}
+      {{student.email}}
+      {{student.branch}}
+    </ion-label>
+    <ion-button slot="start">
+      Start
+    </ion-button>
+  </ion-item>
+  </ion-list>
+</ion-content>

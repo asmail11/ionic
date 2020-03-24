@@ -1,0 +1,7 @@
+{
+  "name": "sticky-slot",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

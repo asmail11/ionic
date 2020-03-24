@@ -1,0 +1,7 @@
+{
+  "name": "stretchy-header",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

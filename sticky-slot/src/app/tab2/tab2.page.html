@@ -1,0 +1,66 @@
+<ion-header color="primary">
+  <ion-toolbar>
+    <ion-title>
+      Fixed Solt
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-row class="ion-no-padding" slot="fixed">
+    <ion-col size="12" class="ion-no-padding">
+      <ion-button expand="full" color="secondary" class="ion-no-padding ion-no-margin">
+        My fixed button
+        <ion-icon name="american-football" slot="end"></ion-icon>
+      </ion-button>
+    </ion-col>
+  </ion-row>
+
+  <ion-list>
+    <ion-list-header>
+      <ion-label>A</ion-label>
+    </ion-list-header>
+    <ion-item>Albert</ion-item>
+    <ion-item>Alfred</ion-item>
+    <ion-item>Alexe</ion-item>
+    <ion-item>Atiom</ion-item>
+  </ion-list>
+
+  <ion-list>
+    <ion-list-header>
+      <ion-label>B</ion-label>
+    </ion-list-header>
+    <ion-item>Ben</ion-item>
+    <ion-item>Brandy</ion-item>
+    <ion-item>Bowser</ion-item>
+    <ion-item>Brother</ion-item>
+  </ion-list>
+
+  <ion-list>
+    <ion-list-header>
+      <ion-label>C</ion-label>
+    </ion-list-header>
+    <ion-item>Christain</ion-item>
+    <ion-item>Carl</ion-item>
+    <ion-item>Clown</ion-item>
+    <ion-item>Camel</ion-item>
+  </ion-list>
+
+  <ion-list>
+    <ion-list-header>
+      <ion-label>D</ion-label>
+    </ion-list-header>
+    <ion-item>David</ion-item>
+    <ion-item>Doctor</ion-item>
+    <ion-item>Doodle</ion-item>
+    <ion-item>Dampsey</ion-item>
+  </ion-list>
+
+  <ion-list>
+    <ion-list-header>
+      <ion-label>Other</ion-label>
+    </ion-list-header>
+    <ion-item *ngFor="let i of [1,2,3,4,5,6,7,8,9,1,2,3,4,5,6,7,8,9]"> item {{i}}</ion-item>
+  </ion-list>
+</ion-content>

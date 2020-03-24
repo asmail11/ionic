@@ -1,0 +1,31 @@
+
+<hidenav-stretchheader header-height="50" opacity-factor="7" opacity-color="red" init-expanded="true" no-border="true">
+    <ion-toolbar color="none" #static>
+      <ion-buttons slot="start">
+        <ion-back-button defaultHref="/" color="light">
+          <ion-icon slot="start" name="add"></ion-icon>
+          Click me
+        </ion-back-button>
+      </ion-buttons>
+      <ion-title color="light" (click)="expand()">My Header</ion-title>
+    </ion-toolbar>
+
+
+    <div #shrinkexpand (click)="expand()">
+      <img src="https://miro.medium.com/max/2400/1*-AwR-0AHD-A2EehP9ii6Yg.jpeg" alt="" width="100%">
+    </div>
+
+</hidenav-stretchheader>
+
+
+<ion-content hidenav-sh-content>
+  <ion-card *ngFor="let i of [0,1,2,3,4,5,6,7,8,9]">
+    <ion-card-header>
+      <ion-card-subtitle>Awesome Subtitle</ion-card-subtitle>
+      <ion-card-title>Awesome Title</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Awesome content  {{i}}
+    </ion-card-content>
+  </ion-card>
+</ion-content>

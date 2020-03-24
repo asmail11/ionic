@@ -1,0 +1,23 @@
+<ion-header hidenav-header>
+  <ion-toolbar color="secondary">
+    <ion-title>
+      Stretchy Header
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content hidenav-content>
+  <ion-button routerLink="/second" expand="block" shape="round" color="warning">
+    Click me
+  </ion-button>
+  <ion-card *ngFor="let i of [0,1,2,3,4,5,6,7,8,9]">
+    <ion-card-header>
+      <ion-card-subtitle>Awesome Subtitle</ion-card-subtitle>
+      <ion-card-title>Awesome Title</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Awesome content  {{i}}
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

@@ -1,0 +1,8 @@
+{
+  "name": "google-map",
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
+  "type": "angular"
+}
